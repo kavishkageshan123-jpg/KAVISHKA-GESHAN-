@@ -619,3 +619,84 @@ html {
 .social-btn:hover i {
    animation: wiggle 0.5s ease-in-out;
 }
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to main content */
+.animate-on-load {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0; /* So it's hidden before animating */
+}
+
+.animate-on-load {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+.delay-2 {
+  animation-delay: 0.6s;
+}
+.delay-3 {
+  animation-delay: 0.9s;
+}
+.delay-4 {
+  animation-delay: 1.2s;
+}
+/* Full screen loader */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #000000, #1e90ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOut 2s ease-out forwards;
+  animation-delay: 1.8s;
+}
+
+/* Loader text */
+.loader-text {
+  color: white;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  opacity: 0;
+  animation: textFadeIn 1s ease-in forwards;
+  animation-delay: 0.5s;
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Text fade in */
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
