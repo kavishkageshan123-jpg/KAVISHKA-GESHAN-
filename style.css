@@ -700,3 +700,164 @@ html {
     transform: translateY(0);
   }
 }
+/* 🔁 Responsive design for mobile */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .profile-image {
+    width: 90%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.hero {
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.hero-title span {
+  color: #00ffff;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+.hero-subtitle {
+  color: #dddddd;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1.2s;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 10px #00ffff;
+  }
+  100% {
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.loader-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  animation: textZoomFade 2s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* New Animation */
+@keyframes textZoomFade {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 0 0 10px #1e90ff;
+  }
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: white;
+  text-align: center;
+}
+
+.blue {
+  color: #2d9cdb;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  padding: 50px 20px;
+}
+
+/* Centered Button Container */
+.follow-btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Follow Button Styles */
+.follow-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(to right, #ffffff, #0000ff);
+  border-radius: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.follow-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgb(0, 4, 255);
+}
